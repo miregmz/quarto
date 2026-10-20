@@ -1,0 +1,27 @@
+---
+title: "My Second Quarto Document Mireille"
+format: html
+execute:
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+#| label: iris-scatterplot
+ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point() +
+  scale_x_continuous(limits = c(0, 8), breaks = seq(0, 8, by = 1)) +
+  scale_y_continuous(limits = c(0, 4.5), breaks = seq(0, 4.5, by = 0.5)) +
+  labs(
+    title = "Sepal Measurements by Iris Species",
+    x = "Sepal length (cm)",
+    y = "Sepal width (cm)",
+    color = "Species"
+  ) +
+  theme_minimal()
+```
