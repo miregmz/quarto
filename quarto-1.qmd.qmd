@@ -1,0 +1,12 @@
+
+## My Header.
+
+You can do a lot of cool things in Quarto like **bold** and *italic* text.
+
+title: "My First Quarto Document"
+format: html
+---
+
+```{r}
+6 + 3
+```
